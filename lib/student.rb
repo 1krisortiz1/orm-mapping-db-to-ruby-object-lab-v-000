@@ -58,7 +58,14 @@ class Student
   end
 
   def self.first_X_students_in_grade_10(x)
+      sql = <<-SQL
+          SELECT *
+          FROM students
+          WHERE name = ?
+          LIMIT 1
+          SQL
 
+          DB[:conn].execute(sql)
   end
 
   def save
