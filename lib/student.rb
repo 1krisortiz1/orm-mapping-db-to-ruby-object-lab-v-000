@@ -34,9 +34,9 @@ class Student
       sql = <<-SQL
       SELECT *
       FROM students
-      WHERE grade.size = 9
+      WHERE grade = ?
       SQL
-      DB[:conn].execute(sql)
+      DB[:conn].execute(sql, p)
   end
 
   def save
