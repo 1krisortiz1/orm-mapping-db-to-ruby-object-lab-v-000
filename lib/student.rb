@@ -44,9 +44,8 @@ class Student
       SELECT *
       FROM students
       WHERE grade <= ?
-      LIMIT 1
       SQL
-      DB[:conn].execute(sql, 12)
+      DB[:conn].execute(sql, 11)
   end
 
   def save
