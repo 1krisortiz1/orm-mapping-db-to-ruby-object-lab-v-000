@@ -46,7 +46,7 @@ class Student
       WHERE grade < ?
       SQL
       DB[:conn].execute(sql, 12)
-  end
+  end.first
 
   def save
     sql = <<-SQL
